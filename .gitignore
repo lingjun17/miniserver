@@ -1,0 +1,90 @@
+# IDE related #
+###############
+.idea/
+.vscode/
+compile_commands.json
+
+# Compile related #
+###################
+build/
+cmake-build-debug/
+cmake_install.cmake
+CMakeCache.txt
+Makefile
+Trinidad.cbp
+CMakeFiles/
+*.cbp
+
+# doc related #
+###############
+docs/doxygen/
+
+# auto-gen code #
+#################
+src/app_fas/generated
+src/app_fam/generated
+src/app_demo/generated
+src/app_reader/generated
+src/app_util/generated
+src/infra/es/store/generated
+src/infra/raft/generated
+src/infra/etcdcli/libetcdv3
+src/tools/ferrari/generated
+config/**/esams.ini
+src/infra/etcdclient/generated/
+
+# Test-related #
+################
+code_coverage/
+test_coverage_lcov/
+test_coverage_lcov.*
+*cobertura.xml
+code_coverage.*
+test/target/
+*.out
+config/**/*.crt
+config/**/*.key
+config/**/*.nonkey
+test.db
+test/**/node/*
+bullseye*
+test/app_fam/data
+test/app_fas/data
+*.cov
+node_*
+
+# SonarQube #
+#############
+build_wrapper
+.scannerwork
+
+# SQLite db files #
+###################
+src/**/*.db
+sqlite
+
+# Core files #
+##############
+core
+
+# golang pkg cache #
+####################
+third_party/go/pkg
+
+# submodules #
+##############
+third_party
+third_party/base64
+
+# tags #
+########
+tags
+**/tags
+
+build_tess/app_reader/scripts/pkg
+build_tess/docker/pkg/
+fampu-*.yaml
+faspu-*.yaml
+alpha-*.yaml
+beta-*.yaml
+auth-*.yaml
