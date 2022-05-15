@@ -23,13 +23,18 @@
 ```sh
 1. Switch the work dir is ./OrderBook
 
-2.a. If the repo is cloned from github, just run the follow cmd
+2.a. If the repo is cloned from github, run the following cmd
 git submodule update --init --recursive
 
-2.b. else if the repo has no git info, run the add submodule script
-scripts/addSubmodules.sh
+2.b. If the repo has no git info and no third_party dir, run the add submodule script
+git init && scripts/addSubmodules.sh
 
-3. Run the build scripts, includes cpplint, build -o2 and run UT.
+2.c. If the third_party dir contains all the submodule source code, just pass this step.
+
+3. Install libboost
+sudo apt-get install -y libboost-all-dev
+
+4. Run the build scripts, includes cpplint, build -o2 and run UT.
 scripts/build.sh
 ```
 

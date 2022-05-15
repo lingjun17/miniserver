@@ -7,12 +7,13 @@ found in the LICENSE file.
 #ifndef SRC_EXECUTOR_ORDERPROCESSOR_H_
 #define SRC_EXECUTOR_ORDERPROCESSOR_H_
 
+#include <fstream>
+
+#include "../model/MatchEvent.h"
 #include "../model/Order.h"
 #include "../model/OrderBook.h"
-#include "../model/MatchEvent.h"
 #include "../utils/BigDecimal.h"
 #include "../utils/MpscDoubleBufferQueue.h"
-#include <fstream>
 
 namespace orderbook {
 
