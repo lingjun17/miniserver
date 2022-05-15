@@ -6,26 +6,37 @@
   <img alt="Version" src="https://img.shields.io/badge/license-MIT-yellow.svg?cacheSeconds=2592000" />
 </p>
 
-> OrderBook
-> 
+> OrderBook Features
+> 1. Basic features of matching biding and asking orders;
+> 2. Support three commands, [New, Cancel, Replace], examples provided in ./test/data/test.command;
+> 3. Provide recover mechanism, system will recover state automatically, all events are persisted to disk sequential;
+> 4. All key features are UT covered;
+
+> TODO Features
+> 1. Using a client thread to simulate network module, as most of them are too large, should be improved later;
+> 2. Using MMAP to write file, enable batch mechanism;
+> 3. Single node system is not with high availability, maybe we can take the raft-based solution to replicate the events;
+> 4. If we will pursuit higher performance, we can use a new key [price, orderid] encoding solution. 
 
 ## Install
 
 ```sh
-// Make sure the work dir is ./OrderBook
-// 1.a. If the repo is cloned from github, just run the follow command
-    git submodule update --init --recursive
-// 1.b. else if the repo has no git info, run the add submodule script
-    scripts/addSubmodules.sh
-// 2. Run the build scripts, includes cpplint, build -o2 and run UT.
-    scripts/build.sh
+1. Switch the work dir is ./OrderBook
+
+2.a. If the repo is cloned from github, just run the follow cmd
+git submodule update --init --recursive
+
+2.b. else if the repo has no git info, run the add submodule script
+scripts/addSubmodules.sh
+
+3. Run the build scripts, includes cpplint, build -o2 and run UT.
+scripts/build.sh
 ```
 
 ## Usage
 
 ```sh
 scripts/run.sh 
-
 ```
 
 ## Run tests
@@ -33,10 +44,6 @@ scripts/run.sh
 ```sh
 scripts/ut.sh
 ```
-
-## TODO
-There are a lot of features can be improved in the project.
-1. 
 
 ## Author
 
