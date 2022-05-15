@@ -1,8 +1,12 @@
-project(Goblin)
+project(orderbook)
 
-# Source files
-add_subdirectory(biz)
-add_subdirectory(network)
-add_subdirectory(utils)
+# find source files
+file(GLOB_RECURSE SRC_LIST "*.cpp" "*.h" "*.hpp" "*.cc")
 
-# Libraries
+# add libraries
+set(LIBRARY ${ABSL_LIBS})
+
+add_executable(orderbook ${SRC_LIST})
+target_link_libraries(
+        orderbook
+        ${LIBRARY})
